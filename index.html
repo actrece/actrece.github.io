@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <!-- ........................Custom Css Link........................ -->
+    <link rel="stylesheet" href="style.css">
+    <!--........................Font Awesome Link...................... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body>
+    <!-- ........................Start NavBar........................ -->
+    <nav>
+        <div class="container nav-container">
+            <a href="" class="logo">Actrece<span>Portfolio</Code></span></a>
+
+            <ul class="nav-links">
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#Skills">Hobbies</a></li>
+                <li><a href="#Portfolio">Gallery</a></li>
+            </ul>
+            <button><i class="fa fa-bars"></i></button>
+        </div>
+    </nav>
+    <!-- ........................End NavBar........................ -->
+
+    <!-- ........................Type JS Link........................ -->
+    <script src="./typed.js-main/dist/typed.umd.js"></script>
+    <!-- ........................Start Script........................ -->
+
+    <!-- .......................Start About Section........................ -->
+    <section id="About">
+      <h2>About Me</h2>
+      <div class="container about-container">
+        <div class="about-left">
+          <div class="about-image">
+            <img src="3.jpg" alt="About Me Image">
+          </div>
+        </div>
+        <div class="about-right">
+          <h3>Actrece Angeline V. Delos Santos</h3>
+          <p>
+            Hi! I am Actrece Angeline V. Delos Santos, 19 years of age. I graduated from UC Senior High School, taking up the ABM course. My province is Lupao, Nueva Ecija. I am an upcoming CITCS student passionate about computers and technology. I have learned a few things about Java, C++, and Python after exploring a variety of programming languages and advanced studies.
+          </p>
+        </div>
+      </div>
+      <div class="social-buttons">
+        <a href="https://www.facebook.com/actrece.angeline" target='_blank' class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_actsz" target='_blank' class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://scholar.google.com/citations?user=uedKykwAAAAJ" target='_blank' class="social-icon"><i class="fab fa-google-plus"></i></a>
+        <a href="https://www.linkedin.com/in/actrece-dlssnts-66b241283/" target='_blank' class="social-icon"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>  
+    <!-- ........................End About Section........................ -->
+
+
+    <!-- ........................Start Skills Section........................ -->
+    <section id="Skills">
+      <h2>Hobbies</h2>
+      <div class="container skills-container">
+        <div class="skill">
+            <img src="t.jpg" alt="Hobby 1 Image">
+            <h4>Traveling</h4>
+        </div>
+
+        <div class="skill">
+            <img src="o.jpg" alt="Hobby 2 Image">
+            <h4>Online Games</h4>
+        </div>
+
+        <div class="skill">
+            <img src="r.jpg" alt="Hobby 3 Image">
+            <h4>Reading</h4>
+        </div>
+
+        <div class="skill">
+            <img src="b.jpg" alt="Hobby 4 Image">
+            <h4>Baking</h4>
+        </div>
+
+        <div class="skill">
+            <img src="m.jpg" alt="Hobby 5 Image">
+            <h4>Music</h4>
+        </div>
+
+        <div class="skill">
+            <img src="w.jpg" alt="Hobby 6 Image">
+            <h4>Watching</h4>
+        </div>
+    </div>
+    </section>
+    <!-- ........................End Skills Section........................ -->
+
+
+    <!-- ........................Start Portfolio Section........................ -->
+    <section id="Portfolio">
+      <h2>Gallery</h2>
+      <div class="portfolio-wrapper">
+        <div class="container portfolio-container">
+            <div class="project">
+                <img src="a.jpg" alt="Web Development 1">
+            </div>
+            <div class="project">
+                <img src="d.jpg" alt="Web Development 2">
+            </div>
+            <div class="project">
+                <img src="c.jpg" alt="Web Development 3">
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ........................End Portfolio Section........................ -->
+
+    <!-- ........................Start Script Section........................ -->
+    <script>
+      // Nav Scroll........
+      let nav = document.querySelector('nav');
+
+      window.addEventListener('scroll',()=>{
+        nav.classList.toggle('nav-scroll', window.scrollY > 0);
+      });
+      // Active Toggle........
+      let AllNavLinkA = document.querySelectorAll('.nav-links li a');
+      // Active Add........
+      AllNavLinkA.forEach(item=>{
+        item.addEventListener('click',()=>{
+          removeActive();
+          item.classList.add('acitive');
+        })
+      });
+      // Active Remove......
+      const removeActive =()=> AllNavLinkA.forEach(item=>{
+          item.classList.remove('acitive')
+      });
+
+      // Nav Links Toggler......
+      let menuBars = document.querySelector('nav button');
+      let navlinks = document.querySelector(',nav-links')
+      menuBars.addEventListener('click',()=>{
+        navlinks.classList.toggle('nav-link-block');
+
+      });
+
+    </script>
+    <!-- ........................End Script Section........................ -->
+
+    
+  </body>
+</html>
